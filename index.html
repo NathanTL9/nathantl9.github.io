@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset"UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo"><span>N</span>L</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+        </nav>
+        <a href="#contact" class="contact-btn">Contact Me</a>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>My name is Nathan Lum</h3>
+            <h3>Welcome to my portfolio</h1>
+
+            <p>
+            </p>
+
+            <div class="socials">
+                <a href="https://github.com/NathanTL9" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/nathan-lum-2796241bb/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About Me</h2>
+            <h3>Developer</h3>
+            <p> A computer science grad from the University of Calgary.  Throughout my degree, areas of interest included 
+                human-computer interaction, algorithms and data structures, information visualization, and information security.  
+            </p>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Projects</h2>
+        <div class="project-content">
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Don't Pop The Balloon</h4>
+                    <p>Interactive party game based on the Disney movie Up</p>
+                </div>
+                <a href="https://glitch.com/~dont-pop-the-balloon" target="_blank"><img src="assets/dptbgame.png"></a>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Custom Phone Unlock Idea 1</h4>
+                    <p>Alternative phone unlock idea - Exit the maze</p>
+                </div>
+                <a href="https://glitch.com/~lockscreen-sensor" target="_blank"><img src="https://cdn.dribbble.com/users/685396/screenshots/2086457/media/66a8385f7db151891add54aa45fedbc1.gif" alt=""></a>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Custom Phone Unlock Idea 2</h4>
+                    <p>Alternative phone unlock idea - Lucky Sevens/Scratch lotto ticket</p>
+                </div>
+                <a href="https://glitch.com/~lucky-seven-lockscreen" target="_blank"><img src="https://cdn.dribbble.com/users/685396/screenshots/2086457/media/66a8385f7db151891add54aa45fedbc1.gif" alt=""></a>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>Jam Sesh</h4>
+                    <p>Online music party with live instruments and recording</p>
+                </div>
+                <a href="https://glitch.com/~jam-sesh" target="_blank"><img src="assets/JamSesh.jpg" alt=""></a>
+            </div>
+            <div class="project-box">
+                <div class="taipan-info">
+                    <h4>Taipan Clone</h4>
+                    <p>Clone of the 1979 turn-based strategy game Taipan!</p>
+                </div>
+                <a href="https://github.com/NathanTL9/CPSC-233-Group-Project" target="_blank"><img src="assets/taipan.png" alt=""></a>
+            </div>
+            <div class="project-box">
+                <div class="project-info">
+                    <h4>InfoFlux</h4>
+                    <p>Proof of concept for an information kiosk for downtown Calgary</p>
+                </div>
+                <a href="https://github.com/NathanTL9/CPSC481Project" target="_blank"><img src="" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume" id="resume">
+        <h2 class="heading">My Resume</h2>
+        <div class="pdf">
+            <object data="assets/My_Resume.pdf#toolbar=0&navpanes=0" type="application/pdf" width="50%" height="100%"></object>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact Me</h2>
+        <form method="GET" action="mailto:nlumpanda@gmail.com" enctype="text/plain">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name">
+            </div>
+            <div class="input-box">
+                <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" id="body" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="contact-btn"/>
+            <input type="hidden" name="body"/>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
