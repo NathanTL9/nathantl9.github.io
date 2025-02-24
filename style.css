@@ -23,7 +23,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo{
@@ -71,6 +71,7 @@ span{
     font-weight: 600;
     transition: 0.3s ease;
     cursor: pointer;
+    text-wrap: nowrap;
 }
 
 .contact-btn:hover{
@@ -81,7 +82,9 @@ span{
 
 section{
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
 }
 
 .heading{
@@ -90,10 +93,8 @@ section{
 }
 
 .home{
-    width: 100%;
     display: flex;
     align-items: center;
-    gap: 7em;
     padding: 30px 12% 0;
 }
 
@@ -101,13 +102,13 @@ section{
     max-width: 850px;
 }
 
-.home-content h3{
-    font-size: 55px;
+.home-content h1{
+    font-size: 75px;
+    line-height: 1.2;
 }
 
-.home-content h1{
-    font-size: 65px;
-    line-height: 1.2;
+.home-content h3{
+    font-size: 45px;
 }
 
 .home-content p{
@@ -119,11 +120,11 @@ section{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     background-color: transparent;
     border: 0.2rem solid #009DA8;
-    font-size: 2rem;
+    font-size: 3rem;
     border-radius: 50%;
     color: black;
     margin: 0px 1rem 2rem 0;
@@ -177,7 +178,7 @@ section{
 
 .project-content{
     display: grid;
-    grid-template-columns: repeat(3, 0.75fr);
+    grid-template-columns: repeat(3, minmax(300px, 0.75fr));
     align-items: center;
     gap: 2.5rem;
 }
@@ -331,3 +332,82 @@ input::-webkit-inner-spin-button {
     font-style: normal;
     font-display: swap;
   }
+
+@media(max-width: 1280px) {
+    header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .about .about-content{
+        gap: 3rem;
+    }
+
+    .input-box input{
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+
+    .input-box input::placeholder{
+        font-size: 2.5rem;
+    }
+
+    .input-box i{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 768px) {
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+
+    .input-box input{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+
+    .input-box i{
+        display: none;
+    }
+
+    .projects{
+        flex-direction: column;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, 0.75fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+
+    .input-box input{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+
+    .input-box i{
+        display: none;
+    }
+
+    .projects{
+        flex-direction: column;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, 0.75fr);
+    }
+}
