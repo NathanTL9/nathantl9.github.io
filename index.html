@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset"UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -89,7 +88,7 @@
                     <h4>InfoFlux</h4>
                     <p>Proof of concept for an information kiosk for downtown Calgary</p>
                 </div>
-                <a href="https://github.com/NathanTL9/CPSC481Project" target="_blank"><img src="" alt=""></a>
+                <a href="https://github.com/NathanTL9/CPSC481Project" target="_blank"><img src="assets/calgary.png" alt=""></a>
             </div>
         </div>
     </section>
@@ -97,7 +96,10 @@
     <section class="resume" id="resume">
         <h2 class="heading">My Resume</h2>
         <div class="pdf">
-            <object data="assets/My_Resume.pdf#toolbar=0&navpanes=0" type="application/pdf" width="50%" height="100%"></object>
+            <object data="assets/nathan_lum_resume.pdf#navpanes=0&#view=FitH" type="application/pdf" width="50%" height="100%"></object>
+        </div>
+        <div class="m_pdf">
+            <a href="assets/nathan_lum_resume.pdf" class="pdf-btn" download="nathan_lum_resume">Download</a>
         </div>
     </section>
 
@@ -114,7 +116,7 @@
                 <input type="text" name="subject" placeholder="Subject">
             </div>
             <textarea name="message" id="body" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="contact-btn"/>
+            <input type="submit" value="Send Message" class="send-btn"/>
             <input type="hidden" name="body"/>
         </form>
     </section>
