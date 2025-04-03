@@ -80,6 +80,57 @@ span{
     color: black;
 }
 
+.hamburger {
+    position: fixed;
+    display: none;
+    z-index: 10000;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    background: #535353;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.menuItem {
+    margin: 2rem 4rem;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    color: #009DA8;
+}
+
+.menu {
+    position: fixed;
+    transform: translateY(-1000px);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #535353;
+    list-style: none;
+    padding-top: 4rem;
+    height: 37%;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+.menuIcon {
+    display: none;
+}
+
+.closeIcon {
+    display: none;
+}
+
 section{
     min-height: 100vh;
     padding: 8rem 12%;
@@ -103,17 +154,12 @@ section{
 }
 
 .home-content h1{
-    font-size: 75px;
+    font-size: 60px;
     line-height: 1.2;
 }
 
 .home-content h3{
-    font-size: 45px;
-}
-
-.home-content p{
-    font-size: 18px;
-    margin: 25px 0 30px;
+    font-size: 40px;
 }
 
 .socials a{
@@ -127,7 +173,7 @@ section{
     font-size: 3rem;
     border-radius: 50%;
     color: black;
-    margin: 0px 1rem 2rem 0;
+    margin: 10px 1rem 2rem 0;
     transition: 0.3s ease;
 }
 
@@ -173,6 +219,7 @@ section{
 }
 
 .projects h2{
+    font-size: 60px;
     text-align: right;
     margin-bottom: 4rem;
 }
@@ -286,6 +333,7 @@ section{
 }
 
 .resume h2 {
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -314,7 +362,8 @@ section{
 }
 
 .contact h2{
-    margin-bottom: 3rem;
+    font-size: 60px;
+    margin-bottom: 1rem;
 }
 
 .contact form{
@@ -334,12 +383,12 @@ section{
 .contact form textarea{
     width: 85%;
     padding: 1.5rem;
-    font-size: 1.6rem;
+    font-size: 20px;
     color: black;
     background-color: white;
     border: 2px black;
     border-radius: 0.8rem;
-    margin: 1.5rem 0;
+    margin: 1.25rem 0;
     resize: none;
 }
 
@@ -384,84 +433,111 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-  }
+}
 
-@media(max-width: 1440px) {
+@media(max-width: 2560px) {
+    .header {
+        padding: 45px 6%;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        margin: 0 20px;
+    }
+
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+
+    .home {
+        padding: 15px 6% 0;
+    }
 
     .home-content h1 {
-        font-size: 65px;
+        font-size: 75px;
         line-height: 0.6;
     }
 
     .home-content h3 {
-        font-size: 35px;
+        font-size: 50px;
         margin: 13px 0 15px;
     }
 
     .socials a {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 2.75rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 4rem;
     }
 
     .about-content h2{
-        font-size: 65px;
+        font-size: 70px;
     }
     
     .about-content h3{
-        font-size: 35px;
+        font-size: 45px;
     }
 
     .about-content p {
-        font-size: 18px;
+        font-size: 24px;
+    }
+    
+    .projects {
+        display: flex;
+        gap: 2em;
+        margin-bottom: 4em;
     }
     
     .projects h2{
         text-align: center;
-        font-size: 45px;
+        font-size: 60x;
         margin-bottom: 2rem;
     }
 
     .project-content {
-        grid-template-columns: repeat(3, minmax(275px, 0.75fr));
+        grid-template-columns: repeat(3, minmax(200px, 0.75fr));
         gap: 2.5rem;
+        margin-left: 15rem;
     }
 
     .project-box a{
-        height: 250px;
-        width: 100%;
+        height: 200px;
     }
 
     .project-info h4 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .project-info p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .taipan-info h4 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .taipan-info p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .resume h2{
-        font-size: 35px;
-        margin: 2em 0 2rem 0; 
+        font-size: 60px;
+        margin: 2rem 0 2rem 0; 
     }
 
     .contact h2 {
-        font-size: 35px;
-        margin-bottom: 2rem;
+        font-size: 60px;
+        margin: 3rem 0;
     }
 
     .contact form .input-box input,
     .contact form textarea {
         padding: 1.2rem;
-        font-size: 0.8rem;
+        font-size: 2rem;
         margin: 0.7rem 0;
     }
 }
@@ -640,7 +716,7 @@ input::-webkit-inner-spin-button {
     .projects h2{
         text-align: center;
         font-size: 35px;
-        margin-bottom: 2rem;
+        margin: 4rem 0px 2rem;
     }
 
     .project-content {
@@ -704,13 +780,21 @@ input::-webkit-inner-spin-button {
     }
 
     .navbar a {
-        font-size: 13px;
-        margin: 0 11px;
+        display: none;
     }
 
     .contact-btn {
         padding: 5px 14px;
         font-size: 12px;
+        margin-right: 35px;
+    }
+
+    .menuItem {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .home {
@@ -818,8 +902,7 @@ input::-webkit-inner-spin-button {
     }
 
     .navbar a {
-        font-size: 12px;
-        margin: 0 16px;
+        display: none;
     }
 
     .contact-btn {
@@ -937,8 +1020,7 @@ input::-webkit-inner-spin-button {
     }
 
     .navbar a {
-        font-size: 10px;
-        margin: 0 11px;
+        display: none;
     }
 
     .contact-btn {

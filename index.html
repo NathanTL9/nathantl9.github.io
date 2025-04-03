@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 <body>
     <header class="header">
         <a href="#home" class="logo"><span>N</span>L</a>
-
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About Me</a>
@@ -19,15 +20,21 @@
         </nav>
         <a href="#contact" class="contact-btn">Contact Me</a>
     </header>
+    <ul class= "menu"> 
+        <li><a class="menuItem" href="#home" class="active">Home</a></li>
+        <li><a class="menuItem" href="#about">About Me</a></li>
+        <li><a class="menuItem" href="#projects">Projects</a></li>
+        <li><a class="menuItem" href="#resume">Resume</a></li>
+    </ul>
+    <button class="hamburger">
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+    </button>
 
     <section class="home" id="home">
         <div class="home-content">
             <h1>Nathan Lum</h1>
             <h3>Software Dev</h3>
-
-            <p>
-            </p>
-
             <div class="socials">
                 <a href="https://github.com/NathanTL9" target="_blank"><i class='bx bxl-github'></i></a>
                 <a href="https://www.linkedin.com/in/nathan-lum-2796241bb/" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>

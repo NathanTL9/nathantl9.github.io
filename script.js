@@ -1,5 +1,5 @@
 let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+let navLinks1 = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -9,7 +9,7 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
+            navLinks1.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a [href*='+ id + ']'.classList.add('active'))
             })
@@ -45,3 +45,30 @@ function contact(e) {
     // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
     this.submit();
 }
+
+let menu = document.querySelector(".menu");
+let menuItems = document.querySelectorAll(".menuItem");
+let hamburger= document.querySelector(".hamburger");
+let closeIcon= document.querySelector(".closeIcon");
+let menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } 
+    else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+    }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
